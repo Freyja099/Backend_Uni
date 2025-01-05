@@ -12,7 +12,10 @@ $res = 0;
 for ($i = 0; $i < 2; $i++)
 {
     $res += fun(2,3);
+    echo $res."</br>";
 }
+
+echo $res."</br>";
 echo fun ($res , 2) / 16;
 ?>
 
