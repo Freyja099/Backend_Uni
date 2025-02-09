@@ -1,6 +1,6 @@
 <?php
     try{
-        $conn = new PDO("mysql : host = localhost ; dbname =test ; charset = utf-8", "root " , "");
+        $conn = new PDO('mysql : host = localhost ; dbname =test ; charset = utf-8', 'root' , '');
     }
     catch(Exception $e)
     {

@@ -4,12 +4,12 @@ require_once('conn.php');
 $request = "SELECT * FROM categories";
 $rs = mysqli_query($conn , $request);
 ?>
-<select id="cat" name="cat" size="1">
+<select id="cats" name="cat" size="1">
     <?php
-    while($data = mysqli_fetch_assoc($rs)){
+    while($cat = mysqli_fetch_assoc($rs)){
     ?>
-    <option value = "<?php echo($data['ID_CAT']) ?>" > 
-        <?php echo ($data['NOM_CAT']) ?>
+    <option value = "<?php echo $cat['ID_CAT'] ; ?>" > 
+        <?php echo $cat['NOM_CAT']; ?>
     </option>
 
 <?php } ?>

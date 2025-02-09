@@ -1,7 +1,7 @@
 <?php
 require_once('conn.php');
-if(isset($_SERVER['idCat'])){
-    $idCat = $_SERVER['idCat'];
+if(isset($_GET['idCat'])){
+    $idCat = $_GET['idCat'];
 }
 else 
 $idCat = '1';
@@ -11,7 +11,7 @@ $res = mysqli_query($conn , $request);
 
 ?>
 
-<table>
+<table border = "1">
     <tr>
         <th> ID </th>
         <th> DES </th>
@@ -23,11 +23,11 @@ $res = mysqli_query($conn , $request);
         while($data = mysqli_fetch_assoc($res)) {
     ?>
     <tr>
-        <td> <?php echo ($data['ID_PROD']) ?> </td>
-        <td> <?php echo ($data['DESIGNATION']) ?> </td>
-        <td> <?php echo ($data['PRIX']) ?> </td>
-        <td> <?php echo ($data['QUANTITE']) ?> </td>
-        <td> <?php echo ($data['PROMO']) ?> </td>
+        <td> <?php echo ($data['ID_PROD']); ?> </td>
+        <td> <?php echo ($data['DESIGNATION']); ?> </td>
+        <td> <?php echo ($data['PRIX']); ?> </td>
+        <td> <?php echo ($data['QUANTITE']); ?> </td>
+        <td> <?php echo ($data['PROMO']); ?> </td>
     </tr>
     <?php } ?>
 </table>

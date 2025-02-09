@@ -5,7 +5,7 @@ $(document).ready(function(){
 function ChargerCategories(){
     $.get("categories.php" , function(rep){
         $("#divCat").html(rep);
-        $("#data").change(function(){
+        $("#cats").change(function(){
             ChargerProduits($(this).val());
         });
     });
